@@ -1,0 +1,338 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-top: 100px;
+
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto 120px;
+  border: 2px solid burlywood;
+  border-radius: 6px;
+}
+
+.exercise-heading {
+  padding: 8px;
+  font-size: 2.4rem;
+  text-align: center;
+  border-bottom: 2px solid burlywood;
+}
+
+.exercise-container {
+  padding: 50px;
+}
+
+.note {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid burlywood;
+}
+
+/* tab-target */
+
+.tab-list {
+  display: flex;
+}
+
+.tab-item {
+  margin-right: 10px;
+}
+
+.tab-item a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: burlywood;
+}
+
+.tab-item a:active {
+  outline: 2px solid #aaa;
+  outline-offset: 1px;
+}
+
+.tab-target .content-container {
+  margin-top: 20px;
+}
+
+.tab-target .content-container div {
+  display: none;
+  padding: 10px;
+  min-height: 100px;
+  border: 1px solid black;
+}
+
+.tab-target .content-container:not(:has(div:target)) div:first-child {
+  display: block;
+}
+
+:target {
+  scroll-margin-top: 1000px;
+}
+
+.tab-target .content-container div:target {
+  display: block;
+}
+
+/* tab-radio */
+.tab-radio input {
+  display: none;
+}
+
+.tab-radio label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: burlywood;
+  user-select: none;
+}
+
+.tab-radio label:hover {
+  cursor: pointer;
+}
+
+.tab-radio label:active {
+  outline: 2px solid #aaa;
+  outline-offset: 1px;
+}
+
+.tab-radio .content-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.tab-radio .tab-content {
+  display: none;
+  min-height: 100px;
+}
+
+.tab-radio #tab1:checked ~ .content-container #content1,
+.tab-radio #tab2:checked ~ .content-container #content2,
+.tab-radio #tab3:checked ~ .content-container #content3 {
+  display: block;
+}
+
+/* collapse */
+.collapse input {
+  display: none;
+}
+
+.collapse label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: burlywood;
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapse label:active {
+  outline: 2px solid #aaa;
+  outline-offset: 1px;
+}
+
+.collapse input:checked ~ label:last-of-type,
+.collapse input:not(:checked) ~ label:first-of-type {
+  display: inline-flex;
+}
+
+.collapse input:checked ~ label:first-of-type,
+.collapse input:not(:checked) ~ label:last-of-type {
+  display: none;
+}
+
+.collapse .content-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid black;
+  min-height: 50px;
+}
+
+.collapse input:checked ~ .content-container {
+  display: flex;
+}
+
+/* slider */
+
+.slider input,
+.slider label,
+.slider p {
+  display: none;
+}
+
+.slider .flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.slider .flex div {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider label {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: burlywood;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slider label:active {
+  outline: 2px solid #aaa;
+  outline-offset: 1px;
+}
+
+.slider p {
+  margin: 10px;
+  padding: 10px;
+  min-height: 200px;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.slider input:checked ~ * {
+  display: inline-block;
+}
+
+/* modal */
+.modal input {
+  display: none;
+}
+
+.modal > label:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: burlywood;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.modal input:checked ~ label:last-of-type {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(53, 51, 51, 0.6);
+}
+
+.modal .modal-content {
+  display: none;
+}
+
+.modal input:checked ~ .modal-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.modal input:checked ~ .modal-content label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: burlywood;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* switch */
+
+.switch {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.switch .label-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  background-color: #ddd;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  overflow: hidden;
+}
+
+.switch .label-switch::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+
+  display: inline-block;
+  content: "";
+
+  height: calc(100% - 4px);
+  aspect-ratio: 1 / 1;
+
+  box-shadow: 4px 2px 7px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 50%;
+
+  transition: left 0.3s linear;
+}
+
+.switch input#switch:checked + .label-switch {
+  background-color: #6edc5f;
+}
+
+.switch input#switch:checked + .label-switch::before {
+  left: 24px;
+}
