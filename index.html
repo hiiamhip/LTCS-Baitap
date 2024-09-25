@@ -7,6 +7,11 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a9520bf6ab.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body style="height: 10000px">
     <!-- tab-target -->
@@ -131,6 +136,157 @@
       </div>
     </div>
 
-    <script></script>
+    <!-- mobile menu -->
+    <div class="container">
+      <h2 class="exercise-heading">Mobile menu</h2>
+      <div class="exercise-container mobile-menu">
+        <input type="checkbox" id="mobile-menu" />
+        <label for="mobile-menu" class="bar-label"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <ul class="menu-list">
+          <li class="menu-item">Trang chủ</li>
+          <li class="menu-item">Khóa học</li>
+          <li class="menu-item">Bài viết</li>
+          <li class="menu-item">Tác giả</li>
+        </ul>
+        <label for="mobile-menu" class="blur-label"></label>
+
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          culpa numquam labore tenetur velit facilis sed natus assumenda
+          voluptatum veniam, saepe est tempore nemo fuga praesentium quaerat,
+          officia, consequuntur magni fugit itaque blanditiis! Amet animi sit,
+          molestias a exercitationem reiciendis libero fugit sunt laudantium
+          dolore numquam provident magnam cupiditate labore inventore tempora,
+          doloribus repellat officiis nihil blanditiis accusamus in eligendi
+          corrupti! Minima, eius, expedita corporis labore vitae dicta
+          consequuntur eos consectetur corrupti officiis illum voluptatem harum
+          amet porro laborum dolorem laudantium culpa magni veritatis! Maxime
+          nobis quas eum dignissimos obcaecati dicta iusto labore, tempora
+          veritatis, a nihil accusantium repellendus aperiam qui? Adipisci,
+          doloremque voluptas maiores fuga reprehenderit consequuntur dolor
+          perspiciatis obcaecati necessitatibus placeat velit! Eum mollitia cum
+          fugit, quae neque maiores eaque, recusandae suscipit, beatae
+          temporibus adipisci quasi saepe sed sapiente? Quisquam quis illo ipsam
+          quidem ipsa nisi, quia neque totam, rem porro, cupiditate laborum
+          expedita doloribus perferendis facere ratione!
+        </p>
+      </div>
+    </div>
+
+    <!-- collapsible -->
+    <div class="container">
+      <h2 class="exercise-heading">Collapsible</h2>
+      <div class="exercise-container collapsible">
+        <div class="form-control">
+          <input type="radio" name="collapsible" id="collapsible-1" />
+          <label for="collapsible-1">Collapsible-1</label>
+          <div class="content-control">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus quo provident neque facere aut reiciendis sint ullam
+              atque minus inventore?
+            </p>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <input type="radio" name="collapsible" id="collapsible-2" />
+          <label for="collapsible-2">Collapsible-2</label>
+          <div class="content-control">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus quo provident neque facere aut reiciendis sint ullam
+              atque minus inventore? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Temporibus quo provident neque facere aut
+              reiciendis sint ullam atque minus inventore? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Temporibus quo provident neque
+              facere aut reiciendis sint ullam atque minus inventore?
+            </p>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <input type="radio" name="collapsible" id="collapsible-3" />
+          <label for="collapsible-3">Collapsible-3</label>
+          <div class="content-control">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus quo provident neque facere aut reiciendis sint ullam
+              atque minus inventore? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Temporibus quo provident neque facere aut
+              reiciendis sint ullam atque minus inventore? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Temporibus quo provident neque
+              facere aut reiciendis sint ullam atque minus inventore? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo
+              provident neque facere aut reiciendis sint ullam atque minus
+              inventore? Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Temporibus quo provident neque facere aut reiciendis sint
+              ullam atque minus inventore? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Temporibus quo provident neque
+              facere aut reiciendis sint ullam atque minus inventore? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo
+              provident neque facere aut reiciendis sint ullam atque minus
+              inventore? Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Temporibus quo provident neque facere aut reiciendis sint
+              ullam atque minus inventore? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Temporibus quo provident neque
+              facere aut reiciendis sint ullam atque minus inventore?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousel -->
+    <div class="container">
+      <h2 class="exercise-heading">Carousel</h2>
+      <div class="exercise-container carousel">
+        <button class="prev-btn">&lt;</button>
+        <div class="form-control">
+          <div class="input-control">
+            <input type="radio" name="carousel" checked />
+            <input type="radio" name="carousel" />
+            <input type="radio" name="carousel" />
+          </div>
+          <div class="slide-view">
+            <div class="slide-control">
+              <div class="slide"><img src="./assets/img/1.jpg" alt="" /></div>
+              <div class="slide"><img src="./assets/img/2.jpg" alt="" /></div>
+              <div class="slide"><img src="./assets/img/3.jpg" alt="" /></div>
+            </div>
+          </div>
+        </div>
+        <button class="next-btn">&gt;</button>
+      </div>
+    </div>
+
+    <script>
+      const $ = (e) => document.querySelector(e);
+      const $$ = (e) => document.querySelectorAll(e);
+
+      const inputList = $$('input[name="carousel"]');
+
+      const prevBtn = $(".prev-btn");
+      const nextBtn = $(".next-btn");
+
+      let currentIndex = 0;
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex++;
+        if (currentIndex >= inputList.length) {
+          currentIndex = 0;
+        }
+        inputList[currentIndex].checked = true;
+      });
+      prevBtn.addEventListener("click", () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+          currentIndex = inputList.length - 1;
+        }
+        inputList[currentIndex].checked = true;
+      });
+    </script>
   </body>
 </html>
